@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="club">
+        <img src="mega.png" >
+    </div>
+  <video autoplay muted loop id="video-bg">
+        <source src="mountain_-_105224 (1080p).mp4" type="video/mp4">
+    </video>
+    <div class="card">
+        <div class="daytime">
+            <div class="date">
+                <h3></h3>
+            </div>
+            <div class="time" >
+                <span class="hrs"></span>
+                <span>:</span>
+                <span class="mins"></span>
+                <span>:</span>
+                <span class="sec"></span>
+                <span class="period"></span>
+            </div>
+        </div>
+        <div class="search">
+            <div class="search-bar">
+                <input id="searchBox" onclick="show()" type="text" placeholder="Enter city name" spellcheck="false">
+                <button id="mic" onclick="Listen()"><img src="./mic.png"></button>
+            </div>
+
+            <button onclick="btn()"><img src="./search.png"></button>
+        </div>
+        <div class="error">
+            <p>Invalid City Name</p>
+        </div>
+        <div class="weather">
+            <div class="dis">
+                <img src="" class="weather-icon">
+                <!-- <h2>Few Clouds</h2> -->
+            </div>
+            <div class="temperature">
+                <h3 class="min-temp">20</h3>
+                <h1 class="temp"></h1>
+                <h3 class="max-temp">20</h3>
+            </div>
+
+            <span id="feel">20°C</span>
+            <h2 class="city"></h2>
+            <div class="details">
+                <div class="col">
+                    <img src="./humidity.png">
+                    <div>
+                        <p class="humidity"></p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="./wind.png">
+                    <div>
+                        <p class="wind"></p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mic">
+        <div class="box">
+            <div class="object">
+                   <div class="outline">
+                   </div>
+                   <div class="outline" id="delayed">
+                   </div>
+                   <div class="button">
+                   </div>
+                   <div class="button" id="circlein">
+                       <svg class="mic-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve" style="fill:#1E2D70">
+       <g><path d="M500,683.8c84.6,0,153.1-68.6,153.1-153.1V163.1C653.1,78.6,584.6,10,500,10c-84.6,0-153.1,68.6-153.1,153.1v367.5C346.9,615.2,415.4,683.8,500,683.8z M714.4,438.8v91.9C714.4,649,618.4,745,500,745c-118.4,0-214.4-96-214.4-214.4v-91.9h-61.3v91.9c0,141.9,107.2,258.7,245,273.9v124.2H346.9V990h306.3v-61.3H530.6V804.5c137.8-15.2,245-132.1,245-273.9v-91.9H714.4z"/></g>
+       </svg>
+                   </div>
+            </div>
+       </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

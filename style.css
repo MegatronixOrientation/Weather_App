@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #222;
+}
+.club{
+    padding: 20px;
+
+
+}
+.club img{
+
+}
+.card {
+    width: 100%;
+    font-family: "Ailerons";
+    max-width: 470px;
+
+    color: #fff;
+
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    text-align: center;
+    transition: 0.7s;
+    /* opacity: 0.1;; */
+}
+
+
+.temperature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.temperature h3 {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+
+
+.daytime {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    /* color: #23272f; */
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-bar {
+    display: flex;
+    position: relative;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    width: 320px;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 6px;
+    font-size: 18px;
+}
+
+#mic {
+    position: absolute;
+    right: 10px;
+}
+
+.city {
+    font-family: 'Prompt', sans-serif;
+    transition: 1s;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.search button img {
+    width: 16px;
+}
+
+.temp {
+    margin-top: 10px;
+}
+
+.weather-icon {
+    width: 150px;
+    margin-top: 30px;
+}
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+    transition: 0.7s;
+}
+
+.weather h2 {
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.dis h2 {
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-top: 10px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.humidity,
+.wind {
+    font-size: 28px;
+    margin-top: -6px;
+}
+
+.weather {
+    display: none;
+    /* transition: 0.7s; */
+    /* font-family: Arial; */
+    /* font-size: 150px; */
+    animation: fadeIn 5s;
+
+}
+
+
+.error {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
+
+
+#video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    /* Ensure the video stays in the background */
+    opacity: 0.6;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+    animation-fill-mode: forwards;
+    /* Ensure the final state of the animation is maintained */
+    opacity: 0;
+    /* Start with 0 opacity */
+}
+
+
+.box {
+    display: none;
+    transition: 0.5s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.object {
+    display: flex;
+    flex: 0 1 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+}
+
+.outline {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /* border: 8px solid #B5A4A4; */
+    border: 8px solid #B5A4A4;
+    animation: pulse 3s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    position: absolute;
+}
+
+.button {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #50CDDD;
+    background: #ffffffad;
+    /* box-shadow: 0px 0px 80px #0084F9; */
+    position: absolute;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+        /* border: 65px solid #0B3082; */
+        border: 65px solid #dadee784;
+    }
+
+    50% {
+        /* border: solid #A3FFC2;		 */
+        border: solid #A3FFC2;
+        opacity: 0.8;
+    }
+
+    90% {
+        transform: scale(3.2);
+        opacity: 0.2;
+        /* border: 3px solid #2E3CFF; */
+        border: 3px solid #d7d8e39b;
+    }
+
+    100% {
+        transform: scale(3.3);
+        opacity: 0;
+        border: 1px solid #7A89FF;
+    }
+}
+
+#delayed {
+    animation-delay: 1.5s;
+}
+
+#circlein {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* background: #6BD6E1; */
+    background: #ffffff87;
+    box-shadow: 0px -2px 15px #E0FF94;
+    position: absolute;
+}
+
+.mic-icon {
+    height: 60px;
+    position: absolute;
+    margin: 21px;
+}
+
+.mic {
+    background: #222032;
+}
+
+
